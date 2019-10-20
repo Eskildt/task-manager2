@@ -8,18 +8,16 @@
     <artifactId>task-manager</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--
+    Her må du legge til:
+    - Prosjektet må bygge med Java 11 (oppsett av maven-compiler-plugin)
+    - Prosjektet må bruke JUnit 5
+    - `mvn test` må kjøre testene (oppsett av maven-surefire-plugin og junit-jupiter-engine)
+    - Etter å ha kjørt `mvn package` må man kunne kjøre prosjektets main-class med `java -jar target/http-server-1.0-SNAPSHOT.jar`
+        (oppsett av maven-shade-plugin)
+    -->
+
     <dependencies>
-        <dependency>
-            <groupId>org.logevents</groupId>
-            <artifactId>logevents</artifactId>
-            <version>0.1.22</version>
-        </dependency>
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-            <version>6.0.3</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -34,7 +32,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.5.2</version>
+            <version>5.4.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -47,7 +45,11 @@
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
             <version>6.0.3</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.logevents</groupId>
+            <artifactId>logevents</artifactId>
+            <version>0.1.22</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -55,17 +57,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
-
-    <!--
-    Her må du legge til:
-    - Prosjektet må bygge med Java 11 (oppsett av maven-compiler-plugin)
-    - Prosjektet må bruke JUnit 5
-    - mvn test må kjøre testene (oppsett av maven-surefire-plugin og junit-jupiter-engine)
-    - Etter å ha kjørt mvn package må man kunne kjøre prosjektets main-class med java -jar target/http-server-1.0-SNAPSHOT.jar
-        (oppsett av maven-shade-plugin)
-    -->
-
     <build>
         <plugins>
             <plugin>
@@ -73,7 +71,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>11</release>
+                    <release> 11 </release>
                 </configuration>
             </plugin>
             <plugin>
@@ -94,7 +92,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>no.kristiania.taskManager.TaskManager</mainClass>
+                                    <mainClass>taskManager.MemberDB</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -107,6 +105,5 @@
     <properties>
         <encoding>UTF-8</encoding>
     </properties>
-
 
 </project>
