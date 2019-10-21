@@ -1,6 +1,6 @@
 # Data Access Object innlevering
 
-[![Build Status]
+[![Build Status] https://travis-ci.com/Westerdals/pgr203-assignment-3-Eskildt/builds/132713195]
 
 <I dette prosjektet kan man liste ut alle prosjektmedlemmer i databasen samt legge til nye prosjektmedlemmer.>
 

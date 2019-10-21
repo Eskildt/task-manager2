@@ -88,18 +88,16 @@ public class MemberDB {
     private void insertMember() throws IOException, SQLException {
 
         Member member = new Member();
-        Task task = new Task();
 
         System.out.println("Please type the name of a new Member.");
         member.setName(input.readLine());
 
         System.out.println("Please assign member to a project.");
-        task.setName(input.readLine());
+        member.setTask(input.readLine());
 
         System.out.println("Please assign email to member.");
         member.setEmail(input.readLine());
 
         memberDao.insert(member);
-        taskDao.insert(task);
     }
 }
