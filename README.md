@@ -2,36 +2,26 @@
 
 [![Build Status] https://travis-ci.com/Westerdals/pgr203-assignment-3-Eskildt/builds/132713195]
 
-<I dette prosjektet kan man liste ut alle prosjektmedlemmer i databasen samt legge til nye prosjektmedlemmer.>
+<Ved å bruke dette prosjektet kan man opprette nye brukere med navn, prosjekt og epost.
+I tillegg lister programmet ut de som er lagt inn i tabellen.>
 
 ## Usage
 
-1. <Hvilken kommando bruker man for å bygge prosjektet>
-2. <Hvilken kommando bruker man for å programmet>
-3. <Hvordan oppretter man en ny prosjektdeltager?>
-4. <VALGFRITT: Hvordan oppretter man en ny prosjektoppgave>
-5. <VALGFRITT: Hvordan bruker man http server til å opprette data?>  
+1. <Maven -> Package>
+2. <Kopier jar fil til terminal og kjør: java -jar <path to jar-file>>
+3. <Etter den er kjørt skriver man member eller project avhengig av hva man skal opprette>
+4. <Følger deretter anvisningene som kommer i terminal>
+5. <Bruker nettleseren(gjerne google chrome) til å søke opp http://localhost:8080/>  
 
-1. For å bygge kjør `mvn package`
-
-2. Start serveren med `java -jar target\task-manager-1.0-SNAPSHOT-shaded.jar
-`
-
-3. Åpne nettleser og gå til **_[localhost:8080](http://localhost:8080\index.html)_**
-
-4. For echo funksjon bruk **_[localhost:8080\echo](http://localhost:8080\index.html)_**
-
-5. Du kan også bruke **_[localhost:8080\echo?body=hei](http://localhost:8080\echo?body=hei)_**
- 
  ## Design (valgfritt)
  
 ![Design](./doc/design.png)
 
  ## Implementation notes
  
-<Hva gjorde dere godt i implementasjonen>
+<Prosessen ble intuitiv og strømlinjeformet for brukeren når de først har kjørt Jar filen>
 
-<Hva følte dere at dere ikke fikk til i implementasjonen>
+<Oversiktlig tabellformat>;
 
 ## Link to review
 
