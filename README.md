@@ -22,7 +22,7 @@ I tillegg lister programmet ut de som er lagt inn i tabellen.>
  
 <Prosessen ble intuitiv og strømlinjeformet for brukeren når de først har kjørt Jar filen>
 
-<Oversiktlig tabellformat>;
+<Oversiktlig tabellformat>
 
 ## Link to review
 
