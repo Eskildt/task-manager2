@@ -51,8 +51,10 @@ public class HttpServer {
                 String requestLine = request.getStartLine();
 
                 System.out.println(requestLine);
-                String requestTarget = requestLine.split(" ")[1];
-
+                String requestTarget;
+                if(requestLine.split(" ").length > 1) {
+                     requestTarget = requestLine.split(" ")[1];
+                } else {requestTarget = "/";}
 
                 int questionPos = requestTarget.indexOf('?');
                 String requestPath = questionPos == -1 ? requestTarget : requestTarget.substring(0, questionPos);
@@ -74,7 +76,8 @@ public class HttpServer {
                         break;
                     case "/membersapi":
                         String members = MemberDB.listAllMembers();
-                        socket.getOutputStream().write(("HTTP/1.0 200 OK\r\n" + "Content-length: " + members.length() + "\r\n" + "Connection: close\r\n"+ "\r\n" + members).getBytes());
+                        System.out.println(members);
+                        socket.getOutputStream().write(("HTTP/1.0 200 OK\r\n" + "Content-length: " + (members.length() + 1) + "\r\n" + "Connection: close\r\n"+ "\r\n" + members).getBytes());
                         break;
                     case "/echo":
                         String statusCode = requestParameters.getOrDefault("status", "200");
@@ -106,7 +109,10 @@ public class HttpServer {
     }
 
     private Map<String, String> parseRequestParameters(String requestLine) {
-        String requestTarget = requestLine.split(" ")[1];
+        String requestTarget;
+        if(requestLine.split(" ").length > 1) {
+            requestTarget = requestLine.split(" ")[1];
+        } else {requestTarget = "/";}
         Map<String, String> requestParameters = new HashMap<>();
         int questionPos = requestTarget.indexOf('?');
         if (questionPos != -1){

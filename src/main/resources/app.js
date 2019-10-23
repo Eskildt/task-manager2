@@ -1,12 +1,11 @@
 new Vue({
     el: "#app",
-    data() {
-        return {
-            members: [],
-            tasks: []
-        };
+    data: {
+        members: [],
+        tasks: []
     },
     mounted() {
+        let membersResult;
         axios
             .get("http://localhost:8080/membersapi")
             .then(response => (this.members = response.data));
