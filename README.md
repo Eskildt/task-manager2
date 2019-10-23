@@ -16,6 +16,7 @@ I tillegg lister programmet ut de som er lagt inn i tabellen.>
  ## Design (valgfritt)
  
 ![Design](./doc/design.png)
+![Design](.doc/design2.png)
 
  ## Implementation notes
  
