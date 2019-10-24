@@ -49,7 +49,7 @@ Dersom dere vil ta oppgaven videre for å være forberedt til eksamen kan dere *
 * [x] Dere har mottatt minst 2 positive og 2 korrektive GitHub issues i github repository fra en annen gruppe
 * [x] Dere har gitt minst 2 positive og 2 korrektive GitHub issues til en annen gruppe og inkluderer link til disse fra README.md
 * [x] Veilederne er lagt til som Collaborators på GitHub repository (`alacho2`, `aridder`, `asmadsen`)
-* [/] Dere har committed kode med begge prosjektdeltagernes GitHub konto
+* [x] Dere har committed kode med begge prosjektdeltagernes GitHub konto
 * [x] Dere har registrert link til GitHub repository i Canvas
 
 ## Sjekkliste for god leveranse
