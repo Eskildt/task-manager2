@@ -57,7 +57,7 @@ Dersom dere vil ta oppgaven videre for å være forberedt til eksamen kan dere *
 * [x] `.gitignore` hindrer `target/`, `.idea` og `*.iml` fra å sjekkes inn ved uhell
 * [x] Navn på pakker, klasser og metoder skal følge vanlig Java-konvensjon når det gjelder små og store bokstaver
 * [x] Indentering skal følge vanlig Java-konvensjon
-* [/] `README.md` inneholder link til en diagram som viser datamodellen
+* [x] `README.md` inneholder link til en diagram som viser datamodellen
 * [x] Programmet kan opprette og liste prosjektoppgaver fra databasen
 * [x] Programmet kan vise prosjektdeltagere fra databasen over http
 * [x] Programmet kan opprette nye prosjektdeltagere i databasen over http
