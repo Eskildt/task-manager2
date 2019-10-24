@@ -22,8 +22,8 @@ I tillegg lister programmet ut de som er lagt inn i tabellen.>
  
 <Prosessen ble intuitiv og strømlinjeformet for brukeren når de først har kjørt Jar filen>
 
-<Oversiktlig tabellformat>
+<Oversiktlig tabellformat, god funksjon for å lage tabell via intellij>
 
 ## Link to review
 
-* link to issue you registered in other group's github repository
+https://github.com/Westerdals/pgr203-assignment-3-Hurbra/issues
