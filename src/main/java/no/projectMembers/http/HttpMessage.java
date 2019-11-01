@@ -13,17 +13,17 @@ public class HttpMessage {
     protected Map<String, String> headers = new HashMap<>();
 
     public HttpMessage(InputStream inputStream) throws IOException {
-
         startLine = readLine(inputStream);
         String headerLine;
+
         while (!(headerLine = readLine(inputStream)).isBlank()) {
             int colonPos = headerLine.indexOf(':');
-            String headerName = headerLine.substring(0, colonPos).trim();
+            String headerName = headerLine.substring(0, colonPos).trim().toLowerCase();
             String headerValue = headerLine.substring(colonPos + 1).trim();
             headers.put(headerName.toLowerCase(), headerValue);
         }
 
-        if (getHeader("Content-Length") != null) {
+        if (getHeader("content-Length") != null) {
             this.body = readBytes(inputStream, getContentLength());
         }
 
@@ -34,7 +34,7 @@ public class HttpMessage {
     }
 
     public int getContentLength() {
-        return Integer.parseInt(getHeader("Content-Length"));
+        return Integer.parseInt(getHeader("content-Length"));
     }
 
     public static String readLine(InputStream inputStream) throws IOException {
