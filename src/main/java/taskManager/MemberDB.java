@@ -28,9 +28,9 @@ public class MemberDB {
 
         dataSource = new PGSimpleDataSource();
 
-        dataSource.setUrl(properties.getProperty("datasource.setUrl"));
-        dataSource.setUser(properties.getProperty("datasource.setUser"));
-        dataSource.setPassword(properties.getProperty("datasource.password"));
+        dataSource.setUrl(properties.getProperty("dataSource.url"));
+        dataSource.setUser(properties.getProperty("dataSource.username"));
+        dataSource.setPassword(properties.getProperty("dataSource.password"));
 
 
         Flyway.configure().dataSource(dataSource).load().migrate();
